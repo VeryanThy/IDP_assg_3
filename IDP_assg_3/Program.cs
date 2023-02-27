@@ -8,6 +8,14 @@ namespace IDP_assg_3
             public string name, type;
             public int Z;
             public double meltPoint, boilPoint;
+
+            public void Print()
+            {
+                Console.WriteLine($"Element: {name} ");
+                Console.WriteLine($"    type: {type}");
+                Console.WriteLine($"    melting point: {meltPoint}K");
+                Console.WriteLine($"    boiling point: {boilPoint}K");
+            }
         }
         public static void Main(string[] args)
         {
@@ -37,7 +45,9 @@ namespace IDP_assg_3
                 meltPoint = 1337.33,
                 boilPoint = 3243,
             };
-
+            oxygen.Print();
+            iron.Print();
+            gold.Print();
         }
     }
 }
