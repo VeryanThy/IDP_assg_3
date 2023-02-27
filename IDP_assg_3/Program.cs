@@ -29,7 +29,7 @@ namespace IDP_assg_3
             Element iron = new Element("Iron", 26, "Metal", 1811, 3243);
 
             Element gold = new Element("Gold", 79, "Metal", 1337.33, 3243);
-            
+
             Element[] elements = new Element[6]
             {oxygen, iron, gold,
             new Element("Hydrogen", 1, "Non Metal", 13.99, 20.271),
@@ -40,6 +40,10 @@ namespace IDP_assg_3
             foreach (Element I in elements)
             {
                 I.Print();
+            }
+            foreach (Element I in elements)
+            {
+                Console.WriteLine(I.name);
             }
         }
     }
