@@ -29,17 +29,18 @@ namespace IDP_assg_3
             Element iron = new Element("Iron", 26, "Metal", 1811, 3243);
 
             Element gold = new Element("Gold", 79, "Metal", 1337.33, 3243);
-            oxygen.Print();
-            iron.Print();
-            gold.Print();
-
+            
             Element[] elements = new Element[6]
             {oxygen, iron, gold,
             new Element("Hydrogen", 1, "Non Metal", 13.99, 20.271),
             new Element("Bromine", 35, "Non Metal", 265.8, 332.0),
             new Element("Mercury", 80, "Metal", 234.3210, 629.88),
             };
-           
+
+            foreach (Element I in elements)
+            {
+                I.Print();
+            }
         }
     }
 }
