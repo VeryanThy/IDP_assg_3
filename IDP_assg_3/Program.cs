@@ -8,6 +8,10 @@ namespace IDP_assg_3
             public string name, type;
             public int Z;
             public double meltPoint, boilPoint;
+            public Element(string A, int B, string C, double D, double E)
+            {
+                name = A; Z = B; type = C; meltPoint = D; boilPoint = E;
+            }
 
             public void Print()
             {
@@ -19,35 +23,23 @@ namespace IDP_assg_3
         }
         public static void Main(string[] args)
         {
-            Element oxygen = new Element()
-            {
-                name = "Oxygen",
-                Z = 8,
-                type = "Non Metal",
-                meltPoint = 54.36,
-                boilPoint = 90.188,
-            };
+            Element oxygen = new Element("Oxygen", 8, "Non Metal", 54.36, 90.188);
 
-            Element iron = new Element()
-            {
-                name = "Iron",
-                Z = 26,
-                type = "Metal",
-                meltPoint = 1811,
-                boilPoint = 3243,
-            };
 
-            Element gold = new Element()
-            {
-                name = "Gold",
-                Z = 79,
-                type = "Metal",
-                meltPoint = 1337.33,
-                boilPoint = 3243,
-            };
+            Element iron = new Element("Iron", 26, "Metal", 1811, 3243);
+
+            Element gold = new Element("Gold", 79, "Metal", 1337.33, 3243);
             oxygen.Print();
             iron.Print();
             gold.Print();
+
+            Element[] elements = new Element[6]
+            {oxygen, iron, gold,
+            new Element("Hydrogen", 1, "Non Metal", 13.99, 20.271),
+            new Element("Bromine", 35, "Non Metal", 265.8, 332.0),
+            new Element("Mercury", 80, "Metal", 234.3210, 629.88),
+            };
+           
         }
     }
 }
