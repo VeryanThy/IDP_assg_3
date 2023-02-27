@@ -43,7 +43,10 @@ namespace IDP_assg_3
             }
             foreach (Element I in elements)
             {
-                Console.WriteLine(I.name);
+                if (I.type == "Metal")
+                {
+                    Console.WriteLine(I.name);
+                }
             }
         }
     }
