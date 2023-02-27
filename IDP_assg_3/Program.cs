@@ -41,9 +41,18 @@ namespace IDP_assg_3
             {
                 I.Print();
             }
+            Console.WriteLine("Metals are:");
             foreach (Element I in elements)
             {
                 if (I.type == "Metal")
+                {
+                    Console.WriteLine(I.name);
+                }
+            }
+            Console.WriteLine("Liquids at 273K are:");
+            foreach (Element I in elements)
+            {
+                if (I.meltPoint < 273.16 && I.boilPoint > 273.16)
                 {
                     Console.WriteLine(I.name);
                 }
